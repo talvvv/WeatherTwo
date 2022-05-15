@@ -2,15 +2,16 @@
 <html>
 <title>Weather bola tursyn</title>
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Aboka lox</h1>
-    <form>
-    <label for="citiname">Enter the name of the city:</label><br>
-    <input type="text" id="citiname" name="citiname"><br>
-    <button type="button" onclick="alert('what do u need')">see today's weather</button>
+  <h1>Talant lox</h1>
+  <form action="weathertwo" method="POST">
+    {% csrf_token %} 
+    <input type="text" id="location" name="location"><br>
+    <input type="submit" value="Submit">
   </form>
-  <p><span>Nahuya nam this button</span></p>
+  <p>Location: {{ location }}</p>
+  <p>Temperature: {{ temperature }}</p>
 </body>
 </html>
