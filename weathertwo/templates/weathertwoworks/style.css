@@ -1,0 +1,128 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body{
+    padding: 0px;
+    margin: 0px;
+    background: url(../images/2.jpg) no-repeat;
+    background-size: cover;
+    font-family: 'Gudea', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+label{
+    margin: 0;
+}
+a{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s all;
+    transition: 0.5s all;
+}
+a:hover{
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    transition: 0.5s all;
+}
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+
+}
+/*widget start here*/
+.widget-main{
+    background: url(../images/s2.jpg); 
+    min-height: 350px;
+    background-size: cover;
+    width: 50%;
+    margin: 5em auto 1em;
+    box-shadow: 0 0 10px #3C3B3B;     
+}
+.widget-left{
+    float: left;
+    width: 35%;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 1.5em 2em;
+    min-height: 302px;
+}
+.date{
+    float: right;
+    width: 50%;
+    text-align: right;
+    padding-top: 2em;
+}
+.date h6{
+    font-size: 0.9em;
+    color: #000;
+}
+.degree{
+    float: left;
+    width: 50%;
+}
+.degree h4{
+    font-size: 1em;
+    color: #000;
+    margin-bottom: 0.2em;
+}
+.degree h3{
+    font-size: 1.8em;
+    color: #000;
+}
+.widget-right{
+    float: right;
+    width: 49%;
+    text-align: right;
+    padding: 2em 1em 1em 1em;
+    position: relative;
+}
+.widget-right p{
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.5em;
+}
+.widget-right h2{
+    font-size: 4em;
+    color:#fff;
+    position: absolute;
+    bottom: -200px;
+    right: 22px;
+}
+.widget-right h5{
+    font-size: 1.7em;
+    color: #fff;
+    margin: 0.8em 0em;
+}

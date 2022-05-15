@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from datetime import datetime
 from django import forms
 import requests
-import json
 
 # Create your views here.
 
@@ -24,39 +23,34 @@ def basic_print(request):
             unit = "metric"
             complete_api_link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=2ee40ecb425f72c75ed3612e15cbd107&units=" + unit
 
-            api_link=requests.get('https://www.metaweather.com/api/location/search/?query=' + location).text
-            api_data=json.loads(api_link)
-            print(api_data)
-            api_location = api_data[0]['woeid']
-            print(api_location)
-            api_link=requests.get('https://www.metaweather.com/api/location/' + str(api_location)).text
-            api_data=json.loads(api_link)
-            print(api_data)
-            # api_link = requests.get(complete_api_link)
-            # api_data = api_link.json()
+            api_link = requests.get(complete_api_link)
+            api_data = api_link.json()
 
-            if True:
-                
-                temperature = round(api_data['consolidated_weather'][0]['the_temp'])
-                description = api_data['consolidated_weather'][0]['weather_state_name'] 
-                humidity = api_data['consolidated_weather'][0]['humidity'] 
-                wind_speed = api_data['consolidated_weather'][0]['wind_speed'] / 2,237
+            if api_data['cod'] == '404':
+                print("Invalid city")
+            else:
+                temperature = api_data['main']['temp']
+                description = api_data['weather'][0]['description'] 
+                humidity = api_data['main']['humidity'] 
+                wind_speed = api_data['wind']['speed']
+                date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")      
             
             return render(
                 request,
-                'weathertwo/index.html',
+                'weathertwo/mainpage.html',
                 {
                     'location': location,
                     'temperature': temperature,
                     'description' : description,
                     'humidity' : humidity,
-                    'wind_speed' : wind_speed, 
+                    'wind_speed' : wind_speed,
+                    'date_time' : date_time      
                 }
             )
 
     else:
         form = LocationForm()
 
-    return render(request, 'weathertwo/index.html', {'form': form})
+    return render(request, 'weathertwo/mainpage.html', {'form': form})
 
     

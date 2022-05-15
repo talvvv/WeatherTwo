@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>Weather bola tursyn</title>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Talant lox</h1>
+  <form action="weathertwo" method="POST">
+    {% csrf_token %} 
+    <input type="text" id="location" name="location"><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p>Location: {{ location }}</p>
+  <p>Temperature: {{ temperature }}</p>
+  <p>description: {{ description }}</p>
+  <p>humidity: {{ humidity }}</p>
+  <p>wind_speed: {{ wind_speed }}</p>
+  <p>date_time: {{ date_time }}</p>
+</body>
+</html>
