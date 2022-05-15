@@ -7,7 +7,7 @@
     <style>body{
         padding: 0px;
         margin: 0px;
-        background: url(../images/i1.jpg) no-repeat;
+        background: url(https://curatedwallpapers.com/wp-content/uploads/Maverick.jpg) no-repeat;
         background-size: cover;
         font-family: 'Gudea', sans-serif;
     }
@@ -30,9 +30,9 @@
     
     .lb {
         width: 80%;
-        height: 70%;
+        height: 80%;
         background-color: rgba(0, 0, 0, 0.5);
-        margin-left: 200px;
+        margin-left: 400px;
         float: left;
         border-radius: 10%;
     }
@@ -42,8 +42,7 @@
         width: 80%;
         height: 70%;
         background-color: rgba(0, 0, 0, 0.5);
-        margin-top: -165px;
-        margin-left: 600px ;
+        margin-left: 1000px ;
         border-radius: 10%;
     }
     
@@ -155,7 +154,13 @@
     input[type=checkbox]:checked + label {
       color: #f00;
       font-style: normal;
-    }</style>
+    }
+    .p1 {
+        font-size: 30px;
+        color: white;
+        text-shadow: 0 2px 5px 0 rgba(138,43,226,0.06),
+    }
+</style>
 </head>
 
 <body>
@@ -163,7 +168,7 @@
         <h1 class="tbt">WeatherTwo</h1>
     </div>
 
-    <div class="lb" style="width: 500px; height: 500px;">
+    <div class="lb" style="width: 500px; height: 550px;">
         <form action="weathertwo" method="POST" style="margin-left: 20px; padding-top:20px;">
             {% csrf_token %}
             <div class="container">
@@ -187,13 +192,12 @@
         </form>
     </div>
     
-    <div class="rb" style="width: 500px; height: 500px;">
-        <p>Location: {{ location }}</p>
-  <p>Temperature: {{ temperature }}</p>
-  <p>description: {{ description }}</p>
-  <p>humidity: {{ humidity }}</p>
-  <p>wind_speed: {{ wind_speed }}</p>
-  <p>date_time: {{ date_time }}</p>
+    <div class="rb" style="width: 500px; height: 500px; padding-left: 50px; padding-top: 50px;">
+        <p class = "p1">Location: {{ location }}</p>
+        <p class = "p1">Temperature: {{ temperature}}</p>
+        <p class = "p1">Description: {{ description }}</p>
+        <p class = "p1">Humidity: {{ humidity }}</p>
+        <p class = "p1">Wind Speed: {{ wind_speed }}</p>
 
     </div>
 
