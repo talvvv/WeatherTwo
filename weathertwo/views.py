@@ -25,4 +25,11 @@ def basic_print(request, location):
         wind_speed = api_data['wind']['speed']
         date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")      
     
-    
+    return render(
+        request,
+        'weathertwo/mainpage.html',
+        {
+            'location': location,
+            'temperature': temperature
+        }
+    )
