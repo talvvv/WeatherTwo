@@ -14,11 +14,9 @@ def home(request):
     return HttpResponse("Hello, Django!")
 
 def basic_print(request):
-    print("KOTAK")
     if request.method == 'POST':
         
         form = LocationForm(request.POST)
-        print("KOTAK")
         #print(form.as_p())
         if form.is_valid():
             location = form.cleaned_data['location']
@@ -42,7 +40,11 @@ def basic_print(request):
                 'weathertwo/mainpage.html',
                 {
                     'location': location,
-                    'temperature': temperature
+                    'temperature': temperature,
+                    'description' : description,
+                    'humidity' : humidity,
+                    'wind_speed' : wind_speed,
+                    'date_time' : date_time      
                 }
             )
 
