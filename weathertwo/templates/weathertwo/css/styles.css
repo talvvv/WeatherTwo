@@ -1,0 +1,110 @@
+{% comment %} body{
+    padding: 0px;
+    margin: 0px;
+    background: url(../images/2.jpg) no-repeat;
+    background-size: cover;
+    font-family: 'Gudea', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+label{
+    margin: 0;
+}
+a{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s all;
+    transition: 0.5s all;
+}
+a:hover{
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    transition: 0.5s all;
+}
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+
+}
+/*widget start here*/
+.widget-main{
+    background: url(../images/s2.jpg); 
+    min-height: 350px;
+    background-size: cover;
+    width: 50%;
+    margin: 5em auto 1em;
+    box-shadow: 0 0 10px #3C3B3B;     
+}
+.widget-left{
+    float: left;
+    width: 35%;
+    background: rgba(255, 255, 255, 1);
+    padding: 1.5em 2em;
+    min-height: 302px;
+}
+.date{
+    float: right;
+    width: 50%;
+    text-align: right;
+    padding-top: 2em;
+}
+.date h6{
+    font-size: 0.9em;
+    color: #000;
+}
+.degree{
+    float: left;
+    width: 50%;
+}
+.degree h4{
+    font-size: 1em;
+    color: #000;
+    margin-bottom: 0.2em;
+}
+.degree h3{
+    font-size: 1.8em;
+    color: #000;
+}
+.widget-right{
+    float: right;
+    width: 49%;
+    text-align: right;
+    padding: 2em 1em 1em 1em;
+    position: relative;
+}
+.widget-right p{
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.5em;
+}
+.widget-right h2{
+    font-size: 4em;
+    color:#fff;
+    position: absolute;
+    bottom: -200px;
+    right: 22px;
+}
+.widget-right h5{
+    font-size: 1.7em;
+    color: #fff;
+    margin: 0.8em 0em;
+} {% endcomment %}
+
+.mainp body{
+    background-image: url(../images/s3.jfif);
+    background-size: cover;
+
+}
+
+.main block{
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 30%;
+}
+.
