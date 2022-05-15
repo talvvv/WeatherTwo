@@ -26,21 +26,22 @@ def basic_print(request):
 
             api_link=requests.get('https://www.metaweather.com/api/location/search/?query=' + location).text
             api_data=json.loads(api_link)
-            print(api_data)
             api_location = api_data[0]['woeid']
-            print(api_location)
             api_link=requests.get('https://www.metaweather.com/api/location/' + str(api_location)).text
             api_data=json.loads(api_link)
-            print(api_data)
             # api_link = requests.get(complete_api_link)
             # api_data = api_link.json()
 
             if True:
-                
-                temperature = round(api_data['consolidated_weather'][0]['the_temp'])
-                description = api_data['consolidated_weather'][0]['weather_state_name'] 
-                humidity = api_data['consolidated_weather'][0]['humidity'] 
-                wind_speed = api_data['consolidated_weather'][0]['wind_speed'] / 2,237
+                temperature = list()
+                description = list()
+                humidity = list()
+                wind_speed = list()
+                for i in range(4):
+                    temperature.append(round(api_data['consolidated_weather'][i]['the_temp']))
+                    description.append(api_data['consolidated_weather'][i]['weather_state_name']) 
+                    humidity.append(api_data['consolidated_weather'][i]['humidity'])
+                    wind_speed.append(api_data['consolidated_weather'][i]['wind_speed'] / 2,237)
             
             return render(
                 request,
